@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="88dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/brand"
+                    android:src="@drawable/ic_logo" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/brand"
+                    android:textColor="@color/ink"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/support"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/support"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_headset" />
+
+                <ImageView
+                    android:id="@+id/notifications"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/notifications"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_bell" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_banner"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/corporation"
+                        android:textColor="@color/gold"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="@string/corporation_body"
+                        android:textColor="#D5D5DA"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:contentDescription="@string/corporation"
+                    android:src="@drawable/ic_hero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/actionDatabase"
+                    style="@style/ActionColumn">
+
+                    <ImageView
+                        style="@style/ActionIcon"
+                        android:contentDescription="@string/database"
+                        android:src="@drawable/ic_book" />
+
+                    <TextView
+                        style="@style/ActionLabel"
+                        android:text="@string/database" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/actionInvite"
+                    style="@style/ActionColumn">
+
+                    <ImageView
+                        style="@style/ActionIcon"
+                        android:contentDescription="@string/invite"
+                        android:src="@drawable/ic_invite" />
+
+                    <TextView
+                        style="@style/ActionLabel"
+                        android:text="@string/invite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/actionEvents"
+                    style="@style/ActionColumn">
+
+                    <ImageView
+                        style="@style/ActionIcon"
+                        android:contentDescription="@string/events"
+                        android:src="@drawable/ic_school" />
+
+                    <TextView
+                        style="@style/ActionLabel"
+                        android:text="@string/events" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/actionChallenge"
+                    style="@style/ActionColumn">
+
+                    <ImageView
+                        style="@style/ActionIcon"
+                        android:contentDescription="@string/challenge"
+                        android:src="@drawable/ic_medal" />
+
+                    <TextView
+                        style="@style/ActionLabel"
+                        android:text="@string/challenge" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="@string/ai_chat"
+                android:textColor="@color/ink"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tabInvest"
+                    style="@style/ChatTab"
+                    android:text="@string/tab_invest"
+                    android:textColor="@color/yellow" />
+
+                <TextView
+                    android:id="@+id/tabDaily"
+                    style="@style/ChatTab"
+                    android:text="@string/tab_daily" />
+
+                <TextView
+                    android:id="@+id/tabWork"
+                    style="@style/ChatTab"
+                    android:text="@string/tab_work" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="36dp"
+                android:layout_height="3dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_tab_line" />
+
+            <LinearLayout
+                android:id="@+id/rowAdvisor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_thumb"
+                    android:contentDescription="@string/fund_advisor"
+                    android:src="@drawable/ic_advisor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fund_advisor"
+                        android:textColor="@color/ink"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/fund_advisor_body"
+                        android:textColor="@color/muted"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:contentDescription="@string/fund_advisor"
+                    android:src="@drawable/ic_chevron" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rowTrends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_thumb"
+                    android:contentDescription="@string/market_trends"
+                    android:src="@drawable/ic_trends" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/market_trends"
+                        android:textColor="@color/ink"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/market_trends_body"
+                        android:textColor="@color/muted"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:contentDescription="@string/market_trends"
+                    android:src="@drawable/ic_chevron" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/aiButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_ai"
+        android:gravity="center"
+        android:text="@string/ai"
+        android:textColor="#3A2508"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</FrameLayout>

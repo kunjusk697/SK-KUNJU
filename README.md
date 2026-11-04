@@ -6,7 +6,7 @@ The source payload named 31 entities and omitted 16 of them. This catalog keeps 
 
 The data file is [`data/crypto-entities.json`](data/crypto-entities.json).
 
-The Android app in [`android/`](android/) reads that file and installs as **Crypto Entities**. A debug APK is at [`dist/crypto-entities-debug.apk`](dist/crypto-entities-debug.apk). Rebuild with the Android SDK installed:
+The Android app in [`android/`](android/) is a visual model of the supplied 9MX screens: welcome, sign up, login, and the home shell with Home, Fund, Spot, Team, and Asset. Sign-up and login stay on the device. The app does not create an account, send data, show balances, or take deposits. A debug APK is at [`dist/ninemx-debug.apk`](dist/ninemx-debug.apk). Rebuild with the Android SDK installed:
 
 ```bash
 cd android
