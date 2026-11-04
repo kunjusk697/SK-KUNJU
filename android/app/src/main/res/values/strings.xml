@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Crypto Entities</string>
+    <string name="search_hint">Search entities</string>
+    <string name="relationships">Relationships</string>
+    <string name="no_relationships">No relationships were included for this entity.</string>
+    <string name="empty_search">No entities match that search.</string>
+    <string name="catalog_error">The entity catalog could not be read.</string>
+    <string name="catalog_count">%1$d of %2$d entities · %3$d relationships</string>
+    <string name="back">Back</string>
+</resources>

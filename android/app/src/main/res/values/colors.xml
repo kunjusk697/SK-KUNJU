@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ink">#F4F1EA</color>
+    <color name="muted">#B7B1A6</color>
+    <color name="background">#12151C</color>
+    <color name="surface">#1C212B</color>
+    <color name="stroke">#343B49</color>
+    <color name="gold">#E7C27A</color>
+    <color name="gold_deep">#3A2E16</color>
+</resources>

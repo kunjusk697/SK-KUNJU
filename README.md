@@ -6,6 +6,13 @@ The source payload named 31 entities and omitted 16 of them. This catalog keeps 
 
 The data file is [`data/crypto-entities.json`](data/crypto-entities.json).
 
+The Android app in [`android/`](android/) reads that file and installs as **Crypto Entities**. A debug APK is at [`dist/crypto-entities-debug.apk`](dist/crypto-entities-debug.apk). Rebuild with the Android SDK installed:
+
+```bash
+cd android
+./gradlew assembleDebug
+```
+
 ## Entities
 
 | Name | Type | Description |
