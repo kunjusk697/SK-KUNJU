@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#070709</color>
+    <color name="surface">#141418</color>
+    <color name="input">#2A2C31</color>
+    <color name="ink">#FFFFFF</color>
+    <color name="muted">#A7A7AD</color>
+    <color name="faint">#8E8E93</color>
+    <color name="gold">#E6B325</color>
+    <color name="yellow">#FFC107</color>
+    <color name="yellow_text">#1A1404</color>
+    <color name="error">#FF4D4F</color>
+    <color name="disabled">#2C2C30</color>
+    <color name="disabled_text">#6F6F76</color>
+    <color name="stroke">#3A3A42</color>
+    <color name="line">#24242A</color>
+</resources>
