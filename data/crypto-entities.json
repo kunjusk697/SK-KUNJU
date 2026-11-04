@@ -1,0 +1,195 @@
+{
+  "source": {
+    "note": "Cleaned from a knowledge-graph query result. The payload listed 31 entities and elided 16 of them in the middle of the list. Only complete entity records are included. The final relationship sentence was cut off in the source and is stored only through the portion that was present.",
+    "entities_in_source": 31,
+    "entities_elided": 16,
+    "entities_recorded": 15
+  },
+  "entities": [
+    {
+      "name": "Blockchain Memo Chains",
+      "type": "concept",
+      "description": "Networks that require a memo so a transfer is credited to the correct account. The set named in the source is XRP, EOS, XLM, IOST, BNB_BNB, ATOM, LUNA, and TON."
+    },
+    {
+      "name": "BTC",
+      "type": "artifact",
+      "description": "Bitcoin, a UTXO-based cryptocurrency and one of the chains in the Cobo WaaS 2.0 API (more than 80 supported chains). The Cobo WaaS skill can create BTC wallets and addresses, and BTC can be selected as a display currency in the Cobo Portal Total Assets Trend. The network uses slow block times, a standard confirmation threshold of four, and 100 confirmations before a coinbase transaction is mature. Cobo estimates miner fees for BTC and lets users set network fee limits for operations such as auto token sweeping. BTC can be staked and unstaked through Babylon and appears in Cobo Portal Staking positions and pools. MPC wallets can sign messages on BTC, and BTC is one of the networks used for Satoshi Test address verification, with pre-generated addresses in development environments. It can be bridged or converted to Wrapped Bitcoin (WBTC) in custodial wallets. Cross-chain history includes a failed or erroneous transfer toward Binance Smart Chain. In the SDK and API, BTC is a chain id and token id used to filter transactions, ListEnabledTokens, and Fee Station address queries, and it is the usual example for UTXO transfers, change outputs, UTXO locking, BatchCheckUtxo, fee structures, address validation, and transfer amounts."
+    },
+    {
+      "name": "Bitcoin (BTC)",
+      "type": "data",
+      "description": "The Bitcoin cryptocurrency as it appears in registration details, specifically in connection with BTC addresses. This record is separate from the broader BTC chain and API entity."
+    },
+    {
+      "name": "Total Assets Trend",
+      "type": "data",
+      "description": "A dashboard feature that tracks how asset value changes over time. Users can choose timeframes and the currency used to display those values, including BTC and ETH."
+    },
+    {
+      "name": "Bridge Feature",
+      "type": "artifact",
+      "description": "A Token Swap application tool for moving tokens from one blockchain to another. It is described as a secure, fast cross-chain liquidity path. Cross-chain swaps are not available in the swap feature itself, so bridging is the path used for that movement. Supported examples include USDC, USDT, BTC, and ETH."
+    },
+    {
+      "name": "Signing Requests",
+      "type": "content",
+      "description": "Requests for cryptographic signatures that are sent to participants in an MPC wallet."
+    },
+    {
+      "name": "Digital Assets",
+      "type": "data",
+      "description": "Electronic representations of value, virtual items, or digital property, including cryptocurrencies and programmable tokens such as USDC, USDT, BTC, and ETH. In the Cobo ecosystem this covers more than 3,000 tokens that can be issued, transferred, and managed, including across chains. People and organizations hold them in Cobo Portal, the dashboard, Portal apps, Portal Mobile, and the WaaS 2.0 API, in custodial wallets, exchange wallets, or user-controlled wallets. Protection relies on authenticator apps, key-share backup, transaction and governance policies, user permissions, and Cobo Guard."
+    },
+    {
+      "name": "KSM",
+      "type": "other",
+      "description": "A cryptocurrency that must keep a minimum balance of 0.000333333 KSM in an MPC wallet."
+    },
+    {
+      "name": "ICRC Assets",
+      "type": "data",
+      "description": "Digital assets on the Internet Computer network, including ckBTC, ckETH, and ckUSDC, that use a fixed fee model."
+    },
+    {
+      "name": "MPC Wallet",
+      "type": "artifact",
+      "description": "A multi-party computation wallet that holds key shares, shards, or recovery groups with threshold signatures so no single party has the full private key. Assets stay out of a general pool, and a cold configuration can isolate key shares. In Cobo Portal, Portal Mobile, and WaaS 2.0 these wallets are organization-controlled (OCW) or user-controlled (UCW). They can sign for Safe{Wallet} and can act as delegates for smart-contract wallet transfers and calls. Setup during Portal Mobile onboarding generates key shares and requires a main key. Spending uses key-share groups, signature logic, a root extended public key, and derivation paths. Operations include auto token sweeping, smart-contract batch transfers, manual contract calls through Cobo Connect, balance reads, and UTXO lock and unlock. They are used on networks such as Arbitrum, Solana, and TRON, as staking sources in organization-controlled vaults, and for Babylon addresses used in registration and airdrops. Bridging and swaps (including Jupiter Swap and Token Swap) are available after Cobo KYC. Fee Station can pay fees in USDT or other stablecoins and apply discounts; some consolidation still needs native gas. Administration goes through WalletsMPCWalletsApi, with API keys tied to webhooks. The product is offered for trial accounts and for high-frequency institutional use. Cobo supplies the infrastructure, automated signing, and collection grouped by wallet."
+    },
+    {
+      "name": "Internet Computer",
+      "type": "organization",
+      "description": "The blockchain network that hosts ICRC assets such as ckBTC and ckETH and charges those assets with a fixed fee model."
+    },
+    {
+      "name": "V1.9.0",
+      "type": "event",
+      "description": "A software release on February 19, 2025 that added MPC wallet features, transaction signing changes, and property updates in multiple data schemas."
+    },
+    {
+      "name": "Crypto",
+      "type": "method",
+      "description": "Two distinct uses appear under this name. One is the Go crypto library used for cryptographic operations, including request signing. The other is a payout method, also called a payout channel, that settles funds as a cryptocurrency transfer to a specified blockchain address."
+    },
+    {
+      "name": "Supported Blockchain Networks",
+      "type": "concept",
+      "description": "The group of networks that typically require a memo on transfers: XRP, EOS, XLM, IOST, BNB_BNB, ATOM, LUNA, and TON. This matches the Blockchain Memo Chains concept."
+    },
+    {
+      "name": "Crypto Address",
+      "type": "data",
+      "description": "The blockchain address that receives or sends cryptocurrency. In settlements and crypto payouts it is the destination of the transferred funds. Older API endpoints for creating and deleting these addresses are deprecated."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Cobo",
+      "target": "MPC Wallet",
+      "description": "Cobo provides the Cobo-MPC Wallet: institutional storage and management built on MPC, TSS nodes, and key shares so no party holds the full key. Cobo runs the infrastructure, automated signing, and per-wallet asset collection. A cold configuration isolates key shares from online exposure.",
+      "keywords": ["fund management", "infrastructure", "security", "key share management", "automated signing"]
+    },
+    {
+      "source": "BTC",
+      "target": "Total Assets Trend",
+      "description": "Total Assets Trend can display value data denominated in BTC.",
+      "keywords": ["currency selection", "data display"]
+    },
+    {
+      "source": "Cobo Portal",
+      "target": "MPC Wallet",
+      "description": "Users sign in to Cobo Portal to create and manage MPC wallets, including organization-controlled and user-controlled wallets, their keys, vault settings, and security details. Portal MPC wallets can act as signers and are part of exchange digital-asset operations.",
+      "keywords": ["wallet creation", "management", "portal", "security"]
+    },
+    {
+      "source": "Bridge Feature",
+      "target": "Digital Assets",
+      "description": "Bridge can transfer digital assets including USDC, USDT, BTC, and ETH.",
+      "keywords": ["asset support"]
+    },
+    {
+      "source": "BTC",
+      "target": "Transaction",
+      "description": "BTC is the reference asset used to show how transfer amounts are formatted on transactions.",
+      "keywords": ["asset example", "value calculation"]
+    },
+    {
+      "source": "ETH",
+      "target": "Total Assets Trend",
+      "description": "Total Assets Trend can display value data denominated in ETH.",
+      "keywords": ["currency selection", "data display"]
+    },
+    {
+      "source": "Blockchain Memo Chains",
+      "target": "Cobo Portal",
+      "description": "Cobo Portal recommends a memo on transfers for these chains so the credit lands on the correct account.",
+      "keywords": ["identification", "requirement"]
+    },
+    {
+      "source": "Binance",
+      "target": "Coin-m Futures",
+      "description": "Binance supports coin-margined futures trading.",
+      "keywords": ["account support", "trading features"]
+    },
+    {
+      "source": "Cobo Portal",
+      "target": "Litecoin",
+      "description": "Cobo Portal supports Litecoin token deposits.",
+      "keywords": ["integration", "support"]
+    },
+    {
+      "source": "Digital Assets",
+      "target": "Tokenization",
+      "description": "Tokenization is how users issue and take control of programmable digital assets.",
+      "keywords": ["control", "management"]
+    },
+    {
+      "source": "Development Environment",
+      "target": "MPC Wallet",
+      "description": "MPC wallets are first set up and tested in a development environment during quick start.",
+      "keywords": ["context", "testing"]
+    },
+    {
+      "source": "Actual Payout Amount",
+      "target": "Crypto Payout",
+      "description": "On a crypto payout, the actual payout amount is denominated in a cryptocurrency token and is sent to the recipient's address.",
+      "keywords": ["asset type", "transaction type", "valuation"]
+    },
+    {
+      "source": "Fee Station",
+      "target": "MPC Wallet",
+      "description": "Fee Station is the recommended way for an MPC wallet to pay and reduce network fees. Eligible MPC transactions can settle fees in USDT or other stablecoins, on supported networks.",
+      "keywords": ["gas management", "cost optimization", "wallet support"]
+    },
+    {
+      "source": "Cobo OTC",
+      "target": "USD",
+      "description": "Cobo OTC converts digital assets into USD.",
+      "keywords": ["fiat conversion", "output currency"]
+    },
+    {
+      "source": "BTC",
+      "target": "MPC Wallets",
+      "description": "MPC wallets can create message-signing transactions on the BTC network.",
+      "keywords": ["compatibility", "network support"]
+    },
+    {
+      "source": "ICRC Assets",
+      "target": "Internet Computer",
+      "description": "Internet Computer hosts ICRC assets, including ckBTC and ckETH, and those assets follow its fee rules.",
+      "keywords": ["asset hosting", "network ecosystem", "standards"]
+    },
+    {
+      "source": "API Key",
+      "target": "MPC Wallet",
+      "description": "Vault and project ids returned for an API key apply only to MPC wallets. The key must be associated with an MPC wallet before events for that wallet are returned.",
+      "keywords": ["association", "authentication", "resource restriction"]
+    },
+    {
+      "source": "Crypto",
+      "target": "Crypto Address",
+      "description": "The crypto payout method transfers funds to a specific blockchain crypto address. The source sentence ended at that point.",
+      "keywords": []
+    }
+  ]
+}
